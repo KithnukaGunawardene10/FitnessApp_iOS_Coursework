@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let myWindow = UIWindow(windowScene: scene as! UIWindowScene)
-        let view = UINavigationController(rootViewController: ViewController())
+        let view = UINavigationController(rootViewController: BiometricAuth())
         myWindow.rootViewController = view
         self.window = myWindow
         myWindow.makeKeyAndVisible()

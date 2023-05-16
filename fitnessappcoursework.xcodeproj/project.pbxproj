@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		867598E22A13080A005B7400 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */; };
+		867598E42A13084A005B7400 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E32A13084A005B7400 /* HeaderUIView.swift */; };
+		867598E62A130888005B7400 /* TitlestoshowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */; };
+		867598E92A130A48005B7400 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E82A130A48005B7400 /* Task.swift */; };
+		867598EC2A130A94005B7400 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598EB2A130A94005B7400 /* HomeViewController.swift */; };
+		867598EE2A130AC0005B7400 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598ED2A130AC0005B7400 /* TimerViewController.swift */; };
+		867598F02A130AE5005B7400 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598EF2A130AE5005B7400 /* DiscoverViewController.swift */; };
+		867598F22A130B15005B7400 /* InsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598F12A130B15005B7400 /* InsightViewController.swift */; };
+		867598F42A130B56005B7400 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598F32A130B56005B7400 /* ProfileViewController.swift */; };
+		867598F62A130B73005B7400 /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598F52A130B73005B7400 /* BiometricAuth.swift */; };
+		867598F82A130C9D005B7400 /* SplashScreen_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598F72A130C9D005B7400 /* SplashScreen_Controller.swift */; };
+		867598FA2A130CD7005B7400 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598F92A130CD7005B7400 /* MainTabViewController.swift */; };
+		867598FC2A130CFE005B7400 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598FB2A130CFE005B7400 /* LoginViewController.swift */; };
+		867598FE2A130D59005B7400 /* ResultsbySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598FD2A130D59005B7400 /* ResultsbySearchViewController.swift */; };
 		86A368DB29F0FBF60093C25D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A368DA29F0FBF60093C25D /* AppDelegate.swift */; };
 		86A368DD29F0FBF60093C25D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A368DC29F0FBF60093C25D /* SceneDelegate.swift */; };
 		86A368DF29F0FBF60093C25D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A368DE29F0FBF60093C25D /* ViewController.swift */; };
@@ -15,6 +29,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		867598E32A13084A005B7400 /* HeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
+		867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlestoshowTableViewCell.swift; sourceTree = "<group>"; };
+		867598E82A130A48005B7400 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		867598EB2A130A94005B7400 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		867598ED2A130AC0005B7400 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		867598EF2A130AE5005B7400 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		867598F12A130B15005B7400 /* InsightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightViewController.swift; sourceTree = "<group>"; };
+		867598F32A130B56005B7400 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		867598F52A130B73005B7400 /* BiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
+		867598F72A130C9D005B7400 /* SplashScreen_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen_Controller.swift; sourceTree = "<group>"; };
+		867598F92A130CD7005B7400 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		867598FB2A130CFE005B7400 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		867598FD2A130D59005B7400 /* ResultsbySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsbySearchViewController.swift; sourceTree = "<group>"; };
 		86A368D729F0FBF60093C25D /* fitnessappcoursework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitnessappcoursework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A368DA29F0FBF60093C25D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A368DC29F0FBF60093C25D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +63,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		867598E02A1307D2005B7400 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */,
+				867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */,
+				867598E32A13084A005B7400 /* HeaderUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		867598E72A130A32005B7400 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				867598E82A130A48005B7400 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		867598EA2A130A5E005B7400 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				867598F72A130C9D005B7400 /* SplashScreen_Controller.swift */,
+				867598EB2A130A94005B7400 /* HomeViewController.swift */,
+				867598ED2A130AC0005B7400 /* TimerViewController.swift */,
+				867598EF2A130AE5005B7400 /* DiscoverViewController.swift */,
+				867598F12A130B15005B7400 /* InsightViewController.swift */,
+				867598F32A130B56005B7400 /* ProfileViewController.swift */,
+				867598F52A130B73005B7400 /* BiometricAuth.swift */,
+				867598F92A130CD7005B7400 /* MainTabViewController.swift */,
+				867598FB2A130CFE005B7400 /* LoginViewController.swift */,
+				867598FD2A130D59005B7400 /* ResultsbySearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		86A368CE29F0FBF60093C25D = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +117,9 @@
 		86A368D929F0FBF60093C25D /* fitnessappcoursework */ = {
 			isa = PBXGroup;
 			children = (
+				867598EA2A130A5E005B7400 /* Controllers */,
+				867598E72A130A32005B7400 /* Models */,
+				867598E02A1307D2005B7400 /* View */,
 				86A368DA29F0FBF60093C25D /* AppDelegate.swift */,
 				86A368DC29F0FBF60093C25D /* SceneDelegate.swift */,
 				86A368DE29F0FBF60093C25D /* ViewController.swift */,
@@ -135,8 +201,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				86A368DF29F0FBF60093C25D /* ViewController.swift in Sources */,
+				867598EE2A130AC0005B7400 /* TimerViewController.swift in Sources */,
+				867598F82A130C9D005B7400 /* SplashScreen_Controller.swift in Sources */,
 				86A368DB29F0FBF60093C25D /* AppDelegate.swift in Sources */,
+				867598E62A130888005B7400 /* TitlestoshowTableViewCell.swift in Sources */,
+				867598FA2A130CD7005B7400 /* MainTabViewController.swift in Sources */,
+				867598EC2A130A94005B7400 /* HomeViewController.swift in Sources */,
+				867598E22A13080A005B7400 /* CollectionViewTableViewCell.swift in Sources */,
+				867598F42A130B56005B7400 /* ProfileViewController.swift in Sources */,
 				86A368DD29F0FBF60093C25D /* SceneDelegate.swift in Sources */,
+				867598E92A130A48005B7400 /* Task.swift in Sources */,
+				867598E42A13084A005B7400 /* HeaderUIView.swift in Sources */,
+				867598FE2A130D59005B7400 /* ResultsbySearchViewController.swift in Sources */,
+				867598FC2A130CFE005B7400 /* LoginViewController.swift in Sources */,
+				867598F22A130B15005B7400 /* InsightViewController.swift in Sources */,
+				867598F02A130AE5005B7400 /* DiscoverViewController.swift in Sources */,
+				867598F62A130B73005B7400 /* BiometricAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +358,7 @@
 				DEVELOPMENT_TEAM = U3KHPKX696;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = fitnessappcoursework/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please  allow to continue with FaceID";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -306,6 +387,7 @@
 				DEVELOPMENT_TEAM = U3KHPKX696;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = fitnessappcoursework/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please  allow to continue with FaceID";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
