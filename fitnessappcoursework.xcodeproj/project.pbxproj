@@ -25,31 +25,16 @@
 		867599022A13708E005B7400 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867599012A13708E005B7400 /* ScheduleViewController.swift */; };
 		867599062A1376D8005B7400 /* ScheduleEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867599052A1376D8005B7400 /* ScheduleEditorViewController.swift */; };
 		867599082A137E87005B7400 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867599072A137E87005B7400 /* UserDetailsViewController.swift */; };
-		8698C0282A14A30C0052E3C3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8698C0262A14A3010052E3C3 /* AVFoundation.framework */; };
-		8698C0292A14A30C0052E3C3 /* AVFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8698C0262A14A3010052E3C3 /* AVFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8698C02B2A14A30E0052E3C3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8698C0242A14A2E90052E3C3 /* AVKit.framework */; };
-		8698C02C2A14A30E0052E3C3 /* AVKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8698C0242A14A2E90052E3C3 /* AVKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8698C02E2A14A3A60052E3C3 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698C02D2A14A3A60052E3C3 /* ExerciseViewController.swift */; };
+		8698C02F2A14A5940052E3C3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8698C0262A14A3010052E3C3 /* AVFoundation.framework */; };
+		8698C0322A14A5970052E3C3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8698C0242A14A2E90052E3C3 /* AVKit.framework */; };
+		8698C0352A14AE2C0052E3C3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698C0342A14AE2C0052E3C3 /* WelcomeViewController.swift */; };
 		86A368DB29F0FBF60093C25D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A368DA29F0FBF60093C25D /* AppDelegate.swift */; };
 		86A368DD29F0FBF60093C25D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A368DC29F0FBF60093C25D /* SceneDelegate.swift */; };
 		86A368DF29F0FBF60093C25D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A368DE29F0FBF60093C25D /* ViewController.swift */; };
 		86A368E429F0FBF70093C25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A368E329F0FBF70093C25D /* Assets.xcassets */; };
 		86A368E729F0FBF70093C25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A368E529F0FBF70093C25D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8698C02A2A14A30C0052E3C3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8698C02C2A14A30E0052E3C3 /* AVKit.framework in Embed Frameworks */,
-				8698C0292A14A30C0052E3C3 /* AVFoundation.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +57,8 @@
 		867599072A137E87005B7400 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		8698C0242A14A2E90052E3C3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		8698C0262A14A3010052E3C3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8698C02D2A14A3A60052E3C3 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		8698C0342A14AE2C0052E3C3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		86A368D729F0FBF60093C25D /* fitnessappcoursework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitnessappcoursework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A368DA29F0FBF60093C25D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A368DC29F0FBF60093C25D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8698C02B2A14A30E0052E3C3 /* AVKit.framework in Frameworks */,
-				8698C0282A14A30C0052E3C3 /* AVFoundation.framework in Frameworks */,
+				8698C0322A14A5970052E3C3 /* AVKit.framework in Frameworks */,
+				8698C02F2A14A5940052E3C3 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +109,7 @@
 				867598F12A130B15005B7400 /* InsightViewController.swift */,
 				867598F32A130B56005B7400 /* ProfileViewController.swift */,
 				867598F52A130B73005B7400 /* BiometricAuth.swift */,
+				8698C0342A14AE2C0052E3C3 /* WelcomeViewController.swift */,
 				867598F92A130CD7005B7400 /* MainTabViewController.swift */,
 				867598FB2A130CFE005B7400 /* LoginViewController.swift */,
 				867598FD2A130D59005B7400 /* ResultsbySearchViewController.swift */,
@@ -129,6 +117,7 @@
 				867599072A137E87005B7400 /* UserDetailsViewController.swift */,
 				867599012A13708E005B7400 /* ScheduleViewController.swift */,
 				867599052A1376D8005B7400 /* ScheduleEditorViewController.swift */,
+				8698C02D2A14A3A60052E3C3 /* ExerciseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -185,7 +174,6 @@
 				86A368D329F0FBF60093C25D /* Sources */,
 				86A368D429F0FBF60093C25D /* Frameworks */,
 				86A368D529F0FBF60093C25D /* Resources */,
-				8698C02A2A14A30C0052E3C3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,8 +236,10 @@
 			files = (
 				86A368DF29F0FBF60093C25D /* ViewController.swift in Sources */,
 				867598EE2A130AC0005B7400 /* TimerViewController.swift in Sources */,
+				8698C02E2A14A3A60052E3C3 /* ExerciseViewController.swift in Sources */,
 				867598F82A130C9D005B7400 /* SplashScreen_Controller.swift in Sources */,
 				86A368DB29F0FBF60093C25D /* AppDelegate.swift in Sources */,
+				8698C0352A14AE2C0052E3C3 /* WelcomeViewController.swift in Sources */,
 				867598E62A130888005B7400 /* TitlestoshowTableViewCell.swift in Sources */,
 				867598FA2A130CD7005B7400 /* MainTabViewController.swift in Sources */,
 				867598EC2A130A94005B7400 /* HomeViewController.swift in Sources */,
