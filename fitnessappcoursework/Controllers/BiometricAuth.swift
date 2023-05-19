@@ -47,7 +47,7 @@ class BiometricAuth: UIViewController {
                     let vc = UIViewController()
                     vc.title = "Welcome"
                     vc.view.backgroundColor = .systemBlue
-                    self?.present(UINavigationController(rootViewController: HomeViewController()),
+                    self?.present(UINavigationController(rootViewController: LoginViewController()),
                     animated: true, completion: nil)
                 }
             }

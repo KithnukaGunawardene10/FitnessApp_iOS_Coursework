@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		864149E22A173B5700B7CC1F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149E12A173B5700B7CC1F /* SignupViewController.swift */; };
 		867598E22A13080A005B7400 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */; };
 		867598E42A13084A005B7400 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E32A13084A005B7400 /* HeaderUIView.swift */; };
 		867598E62A130888005B7400 /* TitlestoshowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		864149E12A173B5700B7CC1F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		867598E32A13084A005B7400 /* HeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
 		867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlestoshowTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				867599012A13708E005B7400 /* ScheduleViewController.swift */,
 				867599052A1376D8005B7400 /* ScheduleEditorViewController.swift */,
 				8698C02D2A14A3A60052E3C3 /* ExerciseViewController.swift */,
+				864149E12A173B5700B7CC1F /* SignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				867598E92A130A48005B7400 /* Task.swift in Sources */,
 				867598E42A13084A005B7400 /* HeaderUIView.swift in Sources */,
 				867598FE2A130D59005B7400 /* ResultsbySearchViewController.swift in Sources */,
+				864149E22A173B5700B7CC1F /* SignupViewController.swift in Sources */,
 				867598FC2A130CFE005B7400 /* LoginViewController.swift in Sources */,
 				867599062A1376D8005B7400 /* ScheduleEditorViewController.swift in Sources */,
 				867598F22A130B15005B7400 /* InsightViewController.swift in Sources */,

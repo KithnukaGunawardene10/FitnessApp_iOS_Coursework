@@ -14,6 +14,14 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            let titleLabel = UILabel()
+                titleLabel.text = "Schedules"
+                titleLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
+                titleLabel.textColor = UIColor.white
+                
+                navigationItem.titleView = titleLabel
+            
+            
             // Set up the table view
             tableView = UITableView(frame: view.bounds, style: .plain)
             tableView.delegate = self
@@ -24,6 +32,8 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
             
             // Set up constraints
             NSLayoutConstraint.activate([
+                
+    
                 tableView.topAnchor.constraint(equalTo: view.topAnchor),
                 tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
                 tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

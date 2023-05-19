@@ -11,8 +11,8 @@ class SplashScreen_Controller: UIViewController {
     
     private let imageView : UIImageView = {
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        imageView.image = UIImage(named: "apples")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 450, height: 950))
+        imageView.image = UIImage(named: "main")
         return imageView
         
     }()
@@ -38,7 +38,7 @@ class SplashScreen_Controller: UIViewController {
     
     private func animate()
     {
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 2, animations: {
             let size = self.view.frame.size.width * 3
             let diffX = size - self.view.frame.size.width
             let diffY = self.view.frame.size.height - size
@@ -52,7 +52,7 @@ class SplashScreen_Controller: UIViewController {
             
         })
         
-        UIView.animate(withDuration: 1.5, animations: {
+        UIView.animate(withDuration: 5, animations: {
             self.imageView.alpha = 0
         }, completion: { done in
             if done {

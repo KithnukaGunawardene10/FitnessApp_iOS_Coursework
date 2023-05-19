@@ -10,106 +10,126 @@ import AVKit
 
 class ExerciseViewController: UIViewController {
 
-    private var repCountLabel: UILabel!
-        private var timeLabel: UILabel!
-        private var videoPlayerView: UIView!
-        private var bodyPartSegmentedControl: UISegmentedControl!
-        
-        private var player: AVPlayer?
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            // Configure the rep count label
-            repCountLabel = UILabel()
-            repCountLabel.textAlignment = .center
-            repCountLabel.font = UIFont.systemFont(ofSize: 24)
-            repCountLabel.text = "0"
-            view.addSubview(repCountLabel)
-            
-            // Configure the time label
-            timeLabel = UILabel()
-            timeLabel.textAlignment = .center
-            timeLabel.font = UIFont.systemFont(ofSize: 18)
-            timeLabel.text = "00:00"
-            view.addSubview(timeLabel)
-            
-            // Configure the video player view
-            videoPlayerView = UIView()
-            view.addSubview(videoPlayerView)
-            
-            // Configure the segmented control for body parts
-            bodyPartSegmentedControl = UISegmentedControl(items: ["Upper Body", "Lower Body"])
-            bodyPartSegmentedControl.selectedSegmentIndex = 0
-            bodyPartSegmentedControl.addTarget(self, action: #selector(bodyPartSelected(_:)), for: .valueChanged)
-            view.addSubview(bodyPartSegmentedControl)
-            
-            // Set up autolayout constraints
-            setupConstraints()
-            
-            // Load and play the workout video for the initial selected body part
-            playWorkoutVideo(for: bodyPartSegmentedControl.selectedSegmentIndex)
-        }
-        
-        override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            
-            // Update the frame of the video player view to match the view's bounds
-            videoPlayerView.frame = view.bounds
-        }
-        
-        private func setupConstraints() {
-            // Disable autoresizing mask translation
-            repCountLabel.translatesAutoresizingMaskIntoConstraints = false
-            timeLabel.translatesAutoresizingMaskIntoConstraints = false
-            videoPlayerView.translatesAutoresizingMaskIntoConstraints = false
-            bodyPartSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
-            
-            // Add constraints for rep count label
-            repCountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            repCountLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-            
-            // Add constraints for time label
-            timeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            timeLabel.topAnchor.constraint(equalTo: repCountLabel.bottomAnchor, constant: 8).isActive = true
-            
-            // Add constraints for video player view
-            videoPlayerView.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 20).isActive = true
-            videoPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-            videoPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-            videoPlayerView.bottomAnchor.constraint(equalTo: bodyPartSegmentedControl.topAnchor, constant: -20).isActive = true
-            
-            // Add constraints for body part segmented control
-            bodyPartSegmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-            bodyPartSegmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-            bodyPartSegmentedControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
-        }
-        
-        @objc private func bodyPartSelected(_ sender: UISegmentedControl) {
-            let selectedBodyPartIndex = sender.selectedSegmentIndex
-            playWorkoutVideo(for: selectedBodyPartIndex)
-        }
-        
-        private func playWorkoutVideo(for bodyPartIndex: Int) {
-            let workoutVideoURLString: String
-            switch bodyPartIndex {
-            case 0: // Upper Body
-                workoutVideoURLString = "https://www.youtube.com/watch?v=rrWddYNTwNI"
-            case 1: // Lower Body
-                workoutVideoURLString = "https://www.youtube.com/watch?v=Cq8xjqDLPKg"
-            default:
-                return
-            }
-            
-            if let videoURL = URL(string: workoutVideoURLString) {
-                player = AVPlayer(url: videoURL)
-                
-                let playerLayer = AVPlayerLayer(player: player)
-                playerLayer.videoGravity = .resizeAspectFill
-                videoPlayerView.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
-                videoPlayerView.layer.addSublayer(playerLayer)
-                
-                player?.play()
-            }
-        }
-}
+    // UI components
+       let repCountLabel = UILabel()
+       let timeScheduledLabel = UILabel()
+       let countdownLabel = UILabel()
+       let bodyPartImageView = UIImageView()
+       let startButton = UIButton(type: .system)
+       
+       var countdownTime: TimeInterval = 0
+       var countdownTimer: Timer?
+    
+       let playVideoButton = UIButton(type: .system)
+       
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           view.backgroundColor = .black
+           
+           // Configure and add UI components to the view
+           
+           // Rep Count Label
+           repCountLabel.translatesAutoresizingMaskIntoConstraints = false
+           repCountLabel.text = "Reps: 10"
+           view.addSubview(repCountLabel)
+           
+           // Time Scheduled Label
+           timeScheduledLabel.translatesAutoresizingMaskIntoConstraints = false
+           timeScheduledLabel.text = "Time Scheduled: 10 minutes"
+           view.addSubview(timeScheduledLabel)
+           
+           // Countdown Label
+           countdownLabel.translatesAutoresizingMaskIntoConstraints = false
+           countdownLabel.text = "Countdown: 0"
+           view.addSubview(countdownLabel)
+           
+           // Body Part Image View
+           bodyPartImageView.translatesAutoresizingMaskIntoConstraints = false
+           bodyPartImageView.image = UIImage(named: "bodypart_image")
+           view.addSubview(bodyPartImageView)
+           
+           // Start Button
+           startButton.translatesAutoresizingMaskIntoConstraints = false
+           startButton.setTitle("Start Countdown", for: .normal)
+           startButton.addTarget(self, action: #selector(startCountdown), for: .touchUpInside)
+           view.addSubview(startButton)
+           
+           playVideoButton.translatesAutoresizingMaskIntoConstraints = false
+           playVideoButton.setTitle("Play Workout Video", for: .normal)
+           playVideoButton.addTarget(self, action: #selector(playWorkoutVideo), for: .touchUpInside)
+           view.addSubview(playVideoButton)
+
+           
+           
+           // Set up constraints
+           
+           NSLayoutConstraint.activate([
+               repCountLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+               repCountLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+               
+               timeScheduledLabel.topAnchor.constraint(equalTo: repCountLabel.bottomAnchor, constant: 8),
+               timeScheduledLabel.leadingAnchor.constraint(equalTo: repCountLabel.leadingAnchor),
+               
+               countdownLabel.topAnchor.constraint(equalTo: timeScheduledLabel.bottomAnchor, constant: 8),
+               countdownLabel.leadingAnchor.constraint(equalTo: repCountLabel.leadingAnchor),
+               
+               bodyPartImageView.topAnchor.constraint(equalTo: countdownLabel.bottomAnchor, constant: 16),
+               bodyPartImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+               bodyPartImageView.widthAnchor.constraint(equalToConstant: 200),
+               bodyPartImageView.heightAnchor.constraint(equalToConstant: 200),
+               
+               startButton.topAnchor.constraint(equalTo: bodyPartImageView.bottomAnchor, constant: 16),
+               startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+               
+               playVideoButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 16),
+                  playVideoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+           ])
+       }
+       
+       @objc func startCountdown() {
+           guard let timeScheduledText = timeScheduledLabel.text else {
+               return
+           }
+           
+           let timeComponents = timeScheduledText.components(separatedBy: " ")
+           guard timeComponents.count == 3, let timeValue = Int(timeComponents[2]) else {
+               return
+           }
+           
+           countdownTime = TimeInterval(timeValue * 60)
+           updateCountdownLabel()
+           
+           countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCountdown), userInfo: nil, repeats: true)
+       }
+       
+       @objc func updateCountdown() {
+           countdownTime -= 1
+           
+           if countdownTime <= 0 {
+               countdownTimer?.invalidate()
+               countdownTimer = nil
+               // Handle countdown completion
+           }
+           
+           updateCountdownLabel()
+       }
+       
+       func updateCountdownLabel() {
+           let minutes = Int(countdownTime) / 60
+           let seconds = Int(countdownTime) % 60
+           countdownLabel.text = String(format: "Countdown: %02d:%02d", minutes, seconds)
+       }
+       
+       @objc func playWorkoutVideo() {
+           guard let videoURL = URL(string: "https://www.example.com/workoutvideo.mp4") else {
+               return
+           }
+           
+           let player = AVPlayer(url: videoURL)
+           let playerViewController = AVPlayerViewController()
+           playerViewController.player = player
+           present(playerViewController, animated: true) {
+               player.play()
+           }
+       }
+   }

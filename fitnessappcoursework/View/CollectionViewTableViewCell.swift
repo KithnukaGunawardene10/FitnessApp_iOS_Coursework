@@ -20,6 +20,8 @@ class CollectionViewTableViewCell: UITableViewCell {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         return collectionView
         
+        
+        
     }()
     
     
@@ -41,6 +43,8 @@ class CollectionViewTableViewCell: UITableViewCell {
         super.layoutSubviews()
         collectionView.frame = contentView.bounds
     }
+    
+    
 }
 
 
