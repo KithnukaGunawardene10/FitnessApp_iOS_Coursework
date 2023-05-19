@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		864149E22A173B5700B7CC1F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149E12A173B5700B7CC1F /* SignupViewController.swift */; };
+		864149E62A17703900B7CC1F /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149E52A17703900B7CC1F /* TitleViewController.swift */; };
+		864149E82A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149E72A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift */; };
+		864149EA2A17F24400B7CC1F /* JunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149E92A17F24400B7CC1F /* JunctionViewController.swift */; };
+		864149EC2A180AB200B7CC1F /* ExercisedetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149EB2A180AB200B7CC1F /* ExercisedetailsViewController.swift */; };
 		867598E22A13080A005B7400 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */; };
 		867598E42A13084A005B7400 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E32A13084A005B7400 /* HeaderUIView.swift */; };
 		867598E62A130888005B7400 /* TitlestoshowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */; };
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		864149E12A173B5700B7CC1F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		864149E52A17703900B7CC1F /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		864149E72A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCallDelegate.swift; sourceTree = "<group>"; };
+		864149E92A17F24400B7CC1F /* JunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunctionViewController.swift; sourceTree = "<group>"; };
+		864149EB2A180AB200B7CC1F /* ExercisedetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisedetailsViewController.swift; sourceTree = "<group>"; };
 		867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		867598E32A13084A005B7400 /* HeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
 		867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlestoshowTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 				867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */,
 				867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */,
 				867598E32A13084A005B7400 /* HeaderUIView.swift */,
+				864149E72A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +130,9 @@
 				867599052A1376D8005B7400 /* ScheduleEditorViewController.swift */,
 				8698C02D2A14A3A60052E3C3 /* ExerciseViewController.swift */,
 				864149E12A173B5700B7CC1F /* SignupViewController.swift */,
+				864149E52A17703900B7CC1F /* TitleViewController.swift */,
+				864149E92A17F24400B7CC1F /* JunctionViewController.swift */,
+				864149EB2A180AB200B7CC1F /* ExercisedetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,14 +253,17 @@
 				867598EE2A130AC0005B7400 /* TimerViewController.swift in Sources */,
 				8698C02E2A14A3A60052E3C3 /* ExerciseViewController.swift in Sources */,
 				867598F82A130C9D005B7400 /* SplashScreen_Controller.swift in Sources */,
+				864149E62A17703900B7CC1F /* TitleViewController.swift in Sources */,
 				86A368DB29F0FBF60093C25D /* AppDelegate.swift in Sources */,
 				8698C0352A14AE2C0052E3C3 /* WelcomeViewController.swift in Sources */,
 				867598E62A130888005B7400 /* TitlestoshowTableViewCell.swift in Sources */,
 				867598FA2A130CD7005B7400 /* MainTabViewController.swift in Sources */,
 				867598EC2A130A94005B7400 /* HomeViewController.swift in Sources */,
 				867599002A136F35005B7400 /* BMIValueViewController.swift in Sources */,
+				864149EC2A180AB200B7CC1F /* ExercisedetailsViewController.swift in Sources */,
 				867598E22A13080A005B7400 /* CollectionViewTableViewCell.swift in Sources */,
 				867598F42A130B56005B7400 /* ProfileViewController.swift in Sources */,
+				864149E82A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift in Sources */,
 				86A368DD29F0FBF60093C25D /* SceneDelegate.swift in Sources */,
 				867599082A137E87005B7400 /* UserDetailsViewController.swift in Sources */,
 				867599022A13708E005B7400 /* ScheduleViewController.swift in Sources */,
@@ -256,6 +271,7 @@
 				867598E42A13084A005B7400 /* HeaderUIView.swift in Sources */,
 				867598FE2A130D59005B7400 /* ResultsbySearchViewController.swift in Sources */,
 				864149E22A173B5700B7CC1F /* SignupViewController.swift in Sources */,
+				864149EA2A17F24400B7CC1F /* JunctionViewController.swift in Sources */,
 				867598FC2A130CFE005B7400 /* LoginViewController.swift in Sources */,
 				867599062A1376D8005B7400 /* ScheduleEditorViewController.swift in Sources */,
 				867598F22A130B15005B7400 /* InsightViewController.swift in Sources */,
@@ -403,6 +419,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = fitnessappcoursework/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please  allow to continue with FaceID";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please  allow to continue with photo Upload";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -432,6 +449,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = fitnessappcoursework/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please  allow to continue with FaceID";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please  allow to continue with photo Upload";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

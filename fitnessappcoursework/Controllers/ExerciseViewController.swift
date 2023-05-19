@@ -16,21 +16,44 @@ class ExerciseViewController: UIViewController {
        let countdownLabel = UILabel()
        let bodyPartImageView = UIImageView()
        let startButton = UIButton(type: .system)
+       let titleLabel = UILabel()
        
        var countdownTime: TimeInterval = 0
        var countdownTimer: Timer?
     
        let playVideoButton = UIButton(type: .system)
+    
+    let backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "camo.jpg")
+        return imageView
+    }()
+    
+    
        
        override func viewDidLoad() {
            super.viewDidLoad()
            view.backgroundColor = .black
-           
+           view.addSubview(backgroundImageView)
            // Configure and add UI components to the view
+           
+        
+           
+           
+             titleLabel.text = "Let's Exercise"
+             titleLabel.font = UIFont.boldSystemFont(ofSize: 40)
+             titleLabel.textAlignment = .center
+             titleLabel.translatesAutoresizingMaskIntoConstraints = false
+             
+             view.addSubview(titleLabel)
+
            
            // Rep Count Label
            repCountLabel.translatesAutoresizingMaskIntoConstraints = false
-           repCountLabel.text = "Reps: 10"
+           repCountLabel.text = "Number of Reps to be done : 10"
            view.addSubview(repCountLabel)
            
            // Time Scheduled Label
@@ -40,22 +63,24 @@ class ExerciseViewController: UIViewController {
            
            // Countdown Label
            countdownLabel.translatesAutoresizingMaskIntoConstraints = false
-           countdownLabel.text = "Countdown: 0"
+           countdownLabel.text = "below are the effecting areas"
            view.addSubview(countdownLabel)
            
            // Body Part Image View
            bodyPartImageView.translatesAutoresizingMaskIntoConstraints = false
-           bodyPartImageView.image = UIImage(named: "bodypart_image")
+           bodyPartImageView.image = UIImage(named: "cms")
            view.addSubview(bodyPartImageView)
            
            // Start Button
            startButton.translatesAutoresizingMaskIntoConstraints = false
-           startButton.setTitle("Start Countdown", for: .normal)
+           startButton.setTitle("Move to Countdown", for: .normal)
+           startButton.setTitleColor(.green, for: .normal)
            startButton.addTarget(self, action: #selector(startCountdown), for: .touchUpInside)
            view.addSubview(startButton)
            
            playVideoButton.translatesAutoresizingMaskIntoConstraints = false
            playVideoButton.setTitle("Play Workout Video", for: .normal)
+           playVideoButton.setTitleColor(.green, for: .normal)
            playVideoButton.addTarget(self, action: #selector(playWorkoutVideo), for: .touchUpInside)
            view.addSubview(playVideoButton)
 
@@ -64,43 +89,43 @@ class ExerciseViewController: UIViewController {
            // Set up constraints
            
            NSLayoutConstraint.activate([
-               repCountLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-               repCountLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            
+            
+                backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+                backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+           
+            repCountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30),
+            repCountLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
                
-               timeScheduledLabel.topAnchor.constraint(equalTo: repCountLabel.bottomAnchor, constant: 8),
+               timeScheduledLabel.topAnchor.constraint(equalTo: repCountLabel.bottomAnchor, constant: 28),
                timeScheduledLabel.leadingAnchor.constraint(equalTo: repCountLabel.leadingAnchor),
                
-               countdownLabel.topAnchor.constraint(equalTo: timeScheduledLabel.bottomAnchor, constant: 8),
+               countdownLabel.topAnchor.constraint(equalTo: timeScheduledLabel.bottomAnchor, constant: 28),
                countdownLabel.leadingAnchor.constraint(equalTo: repCountLabel.leadingAnchor),
                
-               bodyPartImageView.topAnchor.constraint(equalTo: countdownLabel.bottomAnchor, constant: 16),
+               bodyPartImageView.topAnchor.constraint(equalTo: countdownLabel.bottomAnchor, constant: 36),
                bodyPartImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-               bodyPartImageView.widthAnchor.constraint(equalToConstant: 200),
-               bodyPartImageView.heightAnchor.constraint(equalToConstant: 200),
+               bodyPartImageView.widthAnchor.constraint(equalToConstant: 400),
+               bodyPartImageView.heightAnchor.constraint(equalToConstant: 250),
                
-               startButton.topAnchor.constraint(equalTo: bodyPartImageView.bottomAnchor, constant: 16),
+               startButton.topAnchor.constraint(equalTo: bodyPartImageView.bottomAnchor, constant: 36),
                startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                
-               playVideoButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 16),
+               playVideoButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 36),
                   playVideoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
            ])
        }
        
-       @objc func startCountdown() {
-           guard let timeScheduledText = timeScheduledLabel.text else {
-               return
-           }
-           
-           let timeComponents = timeScheduledText.components(separatedBy: " ")
-           guard timeComponents.count == 3, let timeValue = Int(timeComponents[2]) else {
-               return
-           }
-           
-           countdownTime = TimeInterval(timeValue * 60)
-           updateCountdownLabel()
-           
-           countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCountdown), userInfo: nil, repeats: true)
-       }
+    @objc func startCountdown() {
+        let TimerViewController = TimerViewController()
+        navigationController?.pushViewController(TimerViewController, animated: true)
+    }
        
        @objc func updateCountdown() {
            countdownTime -= 1
@@ -121,7 +146,7 @@ class ExerciseViewController: UIViewController {
        }
        
        @objc func playWorkoutVideo() {
-           guard let videoURL = URL(string: "https://www.example.com/workoutvideo.mp4") else {
+           guard let videoURL = URL(string: "https://www.youtube.com/watch?v=e9KM8ns3aXk") else {
                return
            }
            

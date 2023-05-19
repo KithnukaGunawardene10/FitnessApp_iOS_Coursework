@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
         
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
-            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action:#selector(ButtonTapped) )
         ]
         
         navigationController?.navigationBar.tintColor = .white
@@ -57,7 +57,12 @@ class HomeViewController: UIViewController {
         homefeedTable.frame =  view.bounds
     }
     
-    
+    @objc private func ButtonTapped() {
+            let scheduleViewController = ScheduleViewController()
+                 navigationController?.pushViewController(scheduleViewController, animated: true)
+        
+        
+    }
     
     
 }
@@ -106,9 +111,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         header.textLabel?.frame = CGRect(x:header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
         
+        
+        
     }
     
 }
-
-
 

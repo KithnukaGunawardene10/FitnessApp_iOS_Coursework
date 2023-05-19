@@ -23,7 +23,7 @@ class HeaderUIView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
-        imageView.image = UIImage(named: "Hero")
+        imageView.image = UIImage(named: "Header")
         return imageView
         
     }()

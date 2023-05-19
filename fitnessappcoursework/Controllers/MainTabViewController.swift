@@ -16,20 +16,20 @@ class MainTabViewController: UITabBarController {
         
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
-        let vc2 = UINavigationController(rootViewController: DiscoverViewController())
-        let vc3 = UINavigationController(rootViewController: InsightViewController())
-        let vc4 = UINavigationController(rootViewController: ProfileViewController())
+        let vc2 = UINavigationController(rootViewController: ExerciseViewController())
+        let vc3 = UINavigationController(rootViewController: DiscoverViewController())
+        let vc4 = UINavigationController(rootViewController: ScheduleViewController())
         
         
-        vc1.tabBarItem.image = UIImage(systemName: "Home" )
-        vc2.tabBarItem.image = UIImage(systemName: "Diet" )
-        vc3.tabBarItem.image = UIImage(systemName: "play" )
-        vc4.tabBarItem.image = UIImage(systemName: "Notify" )
+        vc1.tabBarItem.image = UIImage(systemName: "house" )
+        vc2.tabBarItem.image = UIImage(systemName: "Dumbell" )
+        vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass" )
+        vc4.tabBarItem.image = UIImage(systemName: "play.rectangle" )
         
         vc1.title = "Home"
-        vc2.title = "Diet"
-        vc3.title = "play"
-        vc4.title = "notify"
+        vc2.title = "Exercise"
+        vc3.title = "Search"
+        vc4.title = "Schedule"
         
         tabBar.tintColor = .label
         

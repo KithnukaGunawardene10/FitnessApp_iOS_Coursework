@@ -15,6 +15,7 @@ class DiscoverViewController: UIViewController {
         title = "Search"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
+        view.addSubview(discoverTabele)
         
         
         view.addSubview(discoverTabele)
@@ -29,7 +30,7 @@ class DiscoverViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //discoverTabele.frame = view.bounds
+        discoverTabele.frame = view.bounds
         
     
     }
@@ -37,7 +38,7 @@ class DiscoverViewController: UIViewController {
     
     private let discoverTabele : UITableView = {
         let Table = UITableView()
-        Table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        Table.register(TitlestoshowTableViewCell.self, forCellReuseIdentifier: TitlestoshowTableViewCell.identify)
         return Table
     }()
 
