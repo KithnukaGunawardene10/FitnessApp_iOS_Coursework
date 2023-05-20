@@ -12,6 +12,7 @@
 		864149E82A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149E72A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift */; };
 		864149EA2A17F24400B7CC1F /* JunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149E92A17F24400B7CC1F /* JunctionViewController.swift */; };
 		864149EC2A180AB200B7CC1F /* ExercisedetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149EB2A180AB200B7CC1F /* ExercisedetailsViewController.swift */; };
+		864149F02A18949E00B7CC1F /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864149EF2A18949E00B7CC1F /* ReminderViewController.swift */; };
 		867598E22A13080A005B7400 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */; };
 		867598E42A13084A005B7400 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E32A13084A005B7400 /* HeaderUIView.swift */; };
 		867598E62A130888005B7400 /* TitlestoshowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */; };
@@ -47,6 +48,7 @@
 		864149E72A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCallDelegate.swift; sourceTree = "<group>"; };
 		864149E92A17F24400B7CC1F /* JunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunctionViewController.swift; sourceTree = "<group>"; };
 		864149EB2A180AB200B7CC1F /* ExercisedetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisedetailsViewController.swift; sourceTree = "<group>"; };
+		864149EF2A18949E00B7CC1F /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		867598E12A13080A005B7400 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		867598E32A13084A005B7400 /* HeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
 		867598E52A130888005B7400 /* TitlestoshowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlestoshowTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				864149E52A17703900B7CC1F /* TitleViewController.swift */,
 				864149E92A17F24400B7CC1F /* JunctionViewController.swift */,
 				864149EB2A180AB200B7CC1F /* ExercisedetailsViewController.swift */,
+				864149EF2A18949E00B7CC1F /* ReminderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				867598F42A130B56005B7400 /* ProfileViewController.swift in Sources */,
 				864149E82A17888000B7CC1F /* CollectionViewTableViewCallDelegate.swift in Sources */,
 				86A368DD29F0FBF60093C25D /* SceneDelegate.swift in Sources */,
+				864149F02A18949E00B7CC1F /* ReminderViewController.swift in Sources */,
 				867599082A137E87005B7400 /* UserDetailsViewController.swift in Sources */,
 				867599022A13708E005B7400 /* ScheduleViewController.swift in Sources */,
 				867598E92A130A48005B7400 /* Task.swift in Sources */,
