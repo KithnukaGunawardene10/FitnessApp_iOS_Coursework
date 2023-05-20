@@ -13,6 +13,23 @@ class BiometricAuth: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backgroundImageView: UIImageView = {
+            let imageView = UIImageView()
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = UIImage(named: "auth.jpg")
+            return imageView
+        }()
+        
+        view.addSubview(backgroundImageView)
+        NSLayoutConstraint.activate([
+            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         view.addSubview(button)
         button.center = view.center
@@ -29,7 +46,7 @@ class BiometricAuth: UIViewController {
         var error: NSError? = nil
         if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error){
             
-            let reason = "Please authorize with touch ID "
+            let reason = "Please authorize with  ID "
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] success, error in
                 DispatchQueue.main.async {
                     
@@ -54,7 +71,7 @@ class BiometricAuth: UIViewController {
         }
         
         else if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-            let reason = "Please authorize with touch ID "
+            let reason = "Please authorize with  ID "
             context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { [weak self] success, error in
                 DispatchQueue.main.async {
                     

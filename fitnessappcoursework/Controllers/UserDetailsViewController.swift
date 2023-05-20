@@ -26,6 +26,7 @@ class UserDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
             // profileViewController.profileData = UserDetailsViewController.ProfileData(name: self.name, height: self.height, weight: self.weight, age: self.age, bmi: bmi, fitnessPlan: fitnessPlan)
         
        

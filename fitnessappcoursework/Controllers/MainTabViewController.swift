@@ -16,13 +16,13 @@ class MainTabViewController: UITabBarController {
         
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
-        let vc2 = UINavigationController(rootViewController: ExerciseViewController())
+        let vc2 = UINavigationController(rootViewController: ExercisedetailsViewController())
         let vc3 = UINavigationController(rootViewController: DiscoverViewController())
         let vc4 = UINavigationController(rootViewController: ScheduleViewController())
         
         
         vc1.tabBarItem.image = UIImage(systemName: "house" )
-        vc2.tabBarItem.image = UIImage(systemName: "Dumbell" )
+        vc2.tabBarItem.image = UIImage(systemName: "figure.run" )
         vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass" )
         vc4.tabBarItem.image = UIImage(systemName: "play.rectangle" )
         

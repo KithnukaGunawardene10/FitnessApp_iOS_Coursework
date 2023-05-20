@@ -27,6 +27,9 @@ class ExercisedetailsViewController: UIViewController {
        
        override func viewDidLoad() {
            super.viewDidLoad()
+           
+           
+           
            let backgroundImageView: UIImageView = {
                let imageView = UIImageView()
                imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +49,8 @@ class ExercisedetailsViewController: UIViewController {
            ])
            setupUI()
            displayExerciseData()
+           view.backgroundColor = .systemBackground
+
            
            
        }

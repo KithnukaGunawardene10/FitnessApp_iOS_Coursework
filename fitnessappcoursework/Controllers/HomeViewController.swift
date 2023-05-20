@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
         
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
-            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action:#selector(ButtonTapped) )
+            UIBarButtonItem(image: UIImage(systemName: "hourglass"), style: .done, target: self, action:#selector(ButtonTapped) )
         ]
         
         navigationController?.navigationBar.tintColor = .white
@@ -58,8 +58,8 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func ButtonTapped() {
-            let scheduleViewController = ScheduleViewController()
-                 navigationController?.pushViewController(scheduleViewController, animated: true)
+            let reminderViewController = ReminderViewController()
+                 navigationController?.pushViewController(reminderViewController, animated: true)
         
         
     }

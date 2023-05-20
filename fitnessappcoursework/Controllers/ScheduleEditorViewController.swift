@@ -18,6 +18,7 @@ class ScheduleEditorViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            view.backgroundColor = .black
             
             // Set up the schedule text view
             scheduleTextView = UITextView()
