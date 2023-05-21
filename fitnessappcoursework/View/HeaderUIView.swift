@@ -11,7 +11,7 @@ class HeaderUIView: UIView {
     
     private let playbutton: UIButton = {
         let button = UIButton()
-        button.setTitle("Enjoy", for: .normal)
+        button.setTitle("Welcome", for: .normal)
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false

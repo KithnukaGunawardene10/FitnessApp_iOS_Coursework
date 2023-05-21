@@ -62,7 +62,7 @@ class UserDetailsViewController: UIViewController {
         view.addSubview(titleLabel)
         
         nameTextField = UITextField()
-        nameTextField.placeholder = "Your name"
+        nameTextField.placeholder = "Your GYM name"
         nameTextField.keyboardType = .numberPad
         nameTextField.borderStyle = .roundedRect
         nameTextField.layer.borderColor = UIColor.white.cgColor
@@ -187,7 +187,7 @@ class UserDetailsViewController: UIViewController {
     
     
     else {
-        showAlert(message: "Please enter valid height and weight.")
+        showAlert(message: "Please enter valid height or weight or age .")
         return
     }
     
@@ -202,8 +202,9 @@ class UserDetailsViewController: UIViewController {
     
      }
     @objc private func ButtonTapped() {
-             let TabViewController = MainTabViewController()
-                 navigationController?.pushViewController(TabViewController, animated: true)
+             let nextViewController = MainTabViewController()
+                nextViewController.modalPresentationStyle = .fullScreen
+                self.present(nextViewController, animated: true, completion: nil)
         
         
     }

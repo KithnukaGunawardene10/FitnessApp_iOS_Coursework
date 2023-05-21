@@ -52,7 +52,7 @@ class SplashScreen_Controller: UIViewController {
             
         })
         
-        UIView.animate(withDuration: 5, animations: {
+        UIView.animate(withDuration: 2, animations: {
             self.imageView.alpha = 0
         }, completion: { done in
             if done {

@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
   
     
-    let Titles: [String] = ["Fitness","podacsts","Meals","personalize","Best"]
+    let Titles: [String] = ["Exercises","Meals","Routines","personalize","More"]
     
     private let homefeedTable  : UITableView = {
         let table = UITableView(frame: .zero , style: .grouped)
@@ -44,8 +44,9 @@ class HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: Image, style: .done, target: self, action: nil)
         
         navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
-            UIBarButtonItem(image: UIImage(systemName: "hourglass"), style: .done, target: self, action:#selector(ButtonTapped) )
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: #selector(ProfileButtonTapped)),
+            UIBarButtonItem(image: UIImage(systemName: "hourglass"), style: .done, target: self, action:#selector(ButtonTapped) ),
+            UIBarButtonItem(image: UIImage(systemName: "figure.mixed.cardio"), style: .done, target: self, action:#selector(BMIButtonTapped) )
         ]
         
         navigationController?.navigationBar.tintColor = .white
@@ -60,6 +61,20 @@ class HomeViewController: UIViewController {
     @objc private func ButtonTapped() {
             let reminderViewController = ReminderViewController()
                  navigationController?.pushViewController(reminderViewController, animated: true)
+        
+        
+    }
+    
+    @objc private func ProfileButtonTapped() {
+            let profileViewController = ProfileViewController()
+                 navigationController?.pushViewController(profileViewController, animated: true)
+        
+        
+    }
+    
+    @objc private func BMIButtonTapped() {
+            let BMIViewController = BMIValueViewController()
+                 navigationController?.pushViewController(BMIViewController, animated: true)
         
         
     }

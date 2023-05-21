@@ -19,6 +19,8 @@ class WelcomeViewController: UIViewController,UIScrollViewDelegate  {
             setupScrollView()
             setupPageControl()
             startAutoScroll()
+           
+
         }
         
         override func viewDidLayoutSubviews() {
@@ -73,7 +75,8 @@ class WelcomeViewController: UIViewController,UIScrollViewDelegate  {
         }
         
         private func startAutoScroll() {
-            timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: false)
+            
         }
         
         @objc private func scrollToNextPage() {
@@ -84,6 +87,9 @@ class WelcomeViewController: UIViewController,UIScrollViewDelegate  {
             scrollView.setContentOffset(CGPoint(x: nextPageXOffset, y: 0), animated: true)
             
             pageControl.currentPage = nextPage
+            
+            
+
         }
         
         // MARK: - UIScrollViewDelegate
@@ -91,6 +97,7 @@ class WelcomeViewController: UIViewController,UIScrollViewDelegate  {
         func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
             // Invalidate the timer when the user starts interacting with the scroll view
             timer?.invalidate()
+            
         }
         
         func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
